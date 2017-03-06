@@ -100,6 +100,7 @@ Some syntax:
 fs.readFile(fileName [,options], callback):
 fs.readFile('TestFile.txt', function (err, data) {
     if (err) throw err;
+  });
 
 fs.writeFile('test.txt', 'Hello World!', function (err) {
     if (err)
@@ -206,6 +207,7 @@ html
 
 ```
 In node, your view engine needs to be set to pug:
+
 ```js
 
 app.set('view engine', 'pug')
@@ -220,6 +222,8 @@ AJAX stands for asynchronous JavaScript and XML. It is a concept that allows you
 
 Cookies are small files that store information in the browser. They are used so the browser does not always have to reload all the information for a user, when it visits the same page again.
 
+Make it quicker to load websites.
+Store relevant user information.
 
 14. Sequelize ORM
 
@@ -241,6 +245,7 @@ var db = new sequelize('beverages', 'bas', 'bas', {
 This will make a 'bottle' table within the database, with three keys (all strings).
 
 ```js
+
 const Bottle = db.define ('bottle', {
   size: sequelize.STRING,
   color: sequelize.STRING,
@@ -251,6 +256,7 @@ const Bottle = db.define ('bottle', {
 The code below will make a first entry in the database. Sequelize will automatically give it a unique id and a 'createdate' value.
 
 ```js
+
 Bottle.create( {
       size: "L",
       color: "green",
